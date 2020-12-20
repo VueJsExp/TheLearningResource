@@ -6,6 +6,7 @@
             v-bind:resource-title = "resource.title"
             v-bind:resource-description = "resource.description"
             v-bind:resource-link = "resource.link"
+            v-bind:resource-id = "resource.id"
         ></learning-resource>
     </ul>
 </template>
@@ -15,6 +16,7 @@
 import LearningResource from "./LearningResource.vue";
 
 export default {
+    emits: ["delete-resource"],
     components: {
         LearningResource
     },

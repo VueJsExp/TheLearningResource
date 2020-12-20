@@ -3,7 +3,7 @@
     <base-card>
       <header>
         <h3>{{ resourceTitle }}</h3>
-        <base-button mode = "flat">Delete</base-button>
+        <base-button mode = "flat" v-on:click = "deleteResource(resourceId)">Delete</base-button>
       </header>
       <p>{{ resourceDescription }}</p>
       <nav>
@@ -28,8 +28,13 @@ export default {
     resourceLink: {
       type: String,
       required: true
+    },
+    resourceId: {
+      type: String,
+      required: true
     }
-  }
+  },
+  inject: ["deleteResource"]
 };
 </script>
 
